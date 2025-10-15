@@ -96,21 +96,26 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
 
-            // SwitchListTile(
-            //   value: isActive,
-            //   onChanged: (bool value) {
-            //     isActive = value;
-            //     setState(() {});
-            //   },
-            //   title: Text('Ejemplo switch'),
-            //   controlAffinity: ListTileControlAffinity.leading,
-            // ),
+            SwitchListTile(
+              value: isActive,
+              onChanged: (bool value) {
+                isActive = value;
+                setState(() {});
+              },
+              title: Text('Ejemplo switch'),
+              controlAffinity: ListTileControlAffinity.leading,
+            ),
             // Icon(
             //   isChecked ? Icons.favorite : Icons.favorite_border,
             //   color: isChecked ? Colors.red : Colors.black,
             //   size: 80,
             // ),
             // MyWidget(text: '$isActive'),
+            //if (isChecked) Icon(Icons.favorite, color: Colors.red, size: 50),
+            //if (!isChecked) Icon(Icons.favorite_border, color: Colors.black),
+            if (isActive) Icon(Icons.favorite, color: Colors.red, size: 50),
+            if (!isActive)
+              Icon(Icons.favorite_border, color: Colors.black, size: 50),
           ],
         ),
       ),

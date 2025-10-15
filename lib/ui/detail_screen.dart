@@ -87,11 +87,13 @@ class DetailScreen extends StatelessWidget {
                     'Select size',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Row(
-                    spacing: 8,
-                    children: [
-                      for (int i = 7; i < 13; i++) RectangleNumber(number: i),
-                    ],
+                  Expanded(
+                    child: Row(
+                      spacing: 8,
+                      children: [
+                        for (int i = 7; i < 13; i++) RectangleNumber(number: i),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     width: double.infinity,
