@@ -27,7 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
             TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 labelText: 'Username',
                 icon: Icon(Icons.email_outlined),
                 // prefixIcon: Icon(Icons.person_outline),
@@ -36,13 +38,18 @@ class _LoginScreenState extends State<LoginScreen> {
               // obscureText: false,
             ),
 
+            SizedBox(height: 12),
+
             TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 labelText: 'Password',
                 icon: Icon(Icons.lock_outline),
                 // prefixIcon: Icon(Icons.person_outline),
                 suffixIcon: IconButton(
+                  padding: EdgeInsets.only(right: 20),
                   icon: Icon(
                     isHidePass ? Icons.visibility : Icons.visibility_off,
                   ),
@@ -55,6 +62,17 @@ class _LoginScreenState extends State<LoginScreen> {
               obscureText: isHidePass,
             ),
 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  "Olvidaste tu contraseña?",
+                  style: TextStyle(color: Colors.blue),
+                  textAlign: TextAlign.left,
+                ),
+              ],
+            ),
+
             CheckboxListTile(
               value: isChecked,
               onChanged: (bool? value) {
@@ -65,7 +83,18 @@ class _LoginScreenState extends State<LoginScreen> {
               controlAffinity: ListTileControlAffinity.leading,
             ),
 
-            FilledButton(onPressed: () {}, child: Text('INGRESAR')),
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: FilledButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Colors.blue),
+                  foregroundColor: WidgetStateProperty.all(Colors.white),
+                ),
+                child: Text('INGRESAR'),
+              ),
+            ),
 
             // SwitchListTile(
             //   value: isActive,
