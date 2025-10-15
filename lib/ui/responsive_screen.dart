@@ -16,14 +16,14 @@ class ResponsiveScreen extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Container(
-              color: Colors.red,
+              color: const Color.fromARGB(255, 30, 7, 160),
               child: Center(child: Text('1er expanded')),
             ),
           ),
           Expanded(
             flex: 1,
             child: Container(
-              color: Colors.green,
+              color: const Color.fromARGB(255, 0, 0, 0),
               child: Center(child: Text('2do expanded')),
             ),
           ),
