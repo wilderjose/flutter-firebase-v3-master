@@ -3,6 +3,7 @@ import 'package:flutter_application_1/ui/login_screen.dart';
 
 class RegistartPages extends StatefulWidget {
   const RegistartPages({super.key});
+  final String title = 'Registro';
 
   @override
   State<RegistartPages> createState() => _RegistartPagesState();
