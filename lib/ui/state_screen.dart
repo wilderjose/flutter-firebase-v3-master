@@ -18,17 +18,7 @@ class _StateScreenState extends State<StateScreen> {
       appBar: AppBar(
         title: Text('Contador'),
         actions: [
-          IconButton(
-            onPressed: () {
-              String abc = 'abc';
-              setState(() {
-                counter++;
-                abc = 'def';
-              });
-              abc = 'abc';
-            },
-            icon: Icon(Icons.add),
-          ),
+          IconButton(onPressed: () {}, icon: Icon(Icons.add)),
           IconButton(
             onPressed: () {
               counter--;
