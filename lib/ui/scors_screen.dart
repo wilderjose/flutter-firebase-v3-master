@@ -1,4 +1,4 @@
-import 'dart:developer';
+//import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class _ScoreScreenState extends State<ScoreScreen> {
           IconButton(
             onPressed: () async {
               final name = await showRegisterDialog();
-              if (name != null && name.isNotEmpty) {
+              if (name.isNotEmpty) {
                 setState(() {
                   newname = name;
                 });
