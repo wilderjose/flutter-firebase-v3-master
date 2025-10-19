@@ -10,6 +10,7 @@ class ScoreScreen extends StatefulWidget {
 }
 
 class _ScoreScreenState extends State<ScoreScreen> {
+  String? newname;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +20,11 @@ class _ScoreScreenState extends State<ScoreScreen> {
           IconButton(
             onPressed: () async {
               final name = await showRegisterDialog();
-              log('Nombre recibido $name');
+              if (name != null && name.isNotEmpty) {
+                setState(() {
+                  newname = name;
+                });
+              }
             },
             icon: Icon(Icons.add),
           ),
@@ -46,15 +51,16 @@ class _ScoreScreenState extends State<ScoreScreen> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Card(
-                      child: ListTile(
-                        title: Text('Juan Perez'),
-                        subtitle: Text('3 pts'),
-                        onTap: () {
-                          showBottomSheetScore();
-                        },
+                    if (newname != null && newname!.isNotEmpty)
+                      Card(
+                        child: ListTile(
+                          title: Text(newname!),
+                          subtitle: Text('3 pts'),
+                          onTap: () {
+                            showBottomSheetScore();
+                          },
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),
@@ -111,7 +117,9 @@ class _ScoreScreenState extends State<ScoreScreen> {
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.pop(context);
+                if (Navigator.canPop(context)) {
+                  Navigator.pop(context);
+                }
               },
               child: Text('Cancelar'),
             ),
