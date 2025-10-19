@@ -72,7 +72,7 @@ class _ScoreScreenState extends State<ScoreScreen> {
       context: context,
       builder: (context) {
         return Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(6),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
