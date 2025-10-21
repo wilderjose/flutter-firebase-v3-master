@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ui/login_screen.dart';
+import 'package:flutter_application_1/ui/tutoriales/login_screen.dart';
 
 class RegistartPages extends StatefulWidget {
   const RegistartPages({super.key});

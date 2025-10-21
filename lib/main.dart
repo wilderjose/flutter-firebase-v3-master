@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/deshboar/deshboar_screen.dart';
 //import 'package:flutter_application_1/ui/detail_screen.dart';
 //import 'package:flutter_application_1/ui/login_screen.dart';
-import 'package:flutter_application_1/ui/scors_screen.dart';
+import 'package:flutter_application_1/ui/tutoriales/scors_screen.dart';
 //import 'package:flutter_application_1/ui/login_screen.dart';
 //import 'package:flutter_application_1/ui/responsive_screen.dart';
 //import 'package:flutter_application_1/ui/state_screen.dart';
@@ -16,6 +17,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: ScoreScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: DeshboarScreen(),
+    );
   }
 }
